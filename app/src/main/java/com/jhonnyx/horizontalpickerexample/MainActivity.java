@@ -2,14 +2,15 @@ package com.jhonnyx.horizontalpickerexample;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
 import com.github.jhonnyx2012.horizontalpicker.HorizontalPicker;
 
-import org.joda.time.DateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DatePickerListener {
 
@@ -17,32 +18,39 @@ public class MainActivity extends AppCompatActivity implements DatePickerListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        HorizontalPicker picker= (HorizontalPicker) findViewById(R.id.datePicker);
+
+        List<String> list = new ArrayList<>();
+        list.add("فروردین");
+        list.add("اردیبهشت");
+        list.add("خرداد");
+        list.add("تیر");
+        list.add("مرداد");
+        list.add("شهریور");
+        list.add("مهر");
+        list.add("آبان");
+        list.add("آذر");
+        list.add("دی");
+        list.add("بهمن");
+        list.add("اسفند");
+
+        HorizontalPicker picker = findViewById(R.id.datePicker);
         picker.setListener(this)
-                .setDays(120)
-                .setOffset(7)
-                .setDateSelectedColor(Color.DKGRAY)
-                .setDateSelectedTextColor(Color.WHITE)
-                .setMonthAndYearTextColor(Color.DKGRAY)
-                .setTodayButtonTextColor(getResources().getColor(R.color.colorPrimary))
-                .setTodayDateTextColor(getResources().getColor(R.color.colorPrimary))
-                .setTodayDateBackgroundColor(Color.GRAY)
-                .setUnselectedDayTextColor(Color.DKGRAY)
-                .setDayOfWeekTextColor(Color.DKGRAY )
-                .setUnselectedDayTextColor(getResources().getColor(R.color.primaryTextColor))
-                .showTodayButton(false)
+                .setData(list)
+                .setItemBackgroundColor(getResources().getColor(android.R.color.holo_red_dark))
+                .setItemBackgroundTextColor(getResources().getColor(android.R.color.holo_orange_dark))
+                .setItemSelectedBackgroundColor(getResources().getColor(android.R.color.holo_green_dark))
+                .setItemSelectedTextColor(getResources().getColor(android.R.color.holo_blue_dark))
+                .setDefaultSelected(list.size() / 2)
+                .setItemHover(R.drawable.item_hover)
+                .setCount(4)
+                .setSnapHelper(false)
                 .init();
         picker.setBackgroundColor(Color.LTGRAY);
-        picker.setDate(new DateTime());
-    }
 
-//    @Override
-//    public void onDateSelected(DateTime dateSelected) {
-//        Log.i("HorizontalPicker","Fecha seleccionada="+dateSelected.toString());
-//    }
+    }
 
     @Override
     public void onDateSelected(String dateSelected) {
-        Toast.makeText(this, "you Select: "+dateSelected.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "you Select: " + dateSelected, Toast.LENGTH_SHORT).show();
     }
 }

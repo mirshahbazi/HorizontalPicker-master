@@ -14,9 +14,6 @@
         android:paddingRight="8dp"
         android:paddingBottom="6dp"
         android:text="18"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/primaryTextColor"
         android:textSize="18sp" />
 
 </FrameLayout>

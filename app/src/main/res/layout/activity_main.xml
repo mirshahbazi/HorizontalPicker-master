@@ -4,13 +4,28 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context="com.jhonnyx.horizontalpickerexample.MainActivity">
 
-    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
-        android:id="@+id/datePicker"
-        android:background="@color/colorPrimaryDark"
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/drw_gradient" />
+
+    <com.jhonnyx.horizontalpickerexample.horizontalpicker.HorizontalPicker
+        android:id="@+id/list_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorGrayDark" />
+
+    <com.jhonnyx.horizontalpickerexample.horizontalpicker.HorizontalPicker
+        android:id="@+id/list_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.github.jhonnyx2012.horizontalpicker;
+package com.jhonnyx.horizontalpickerexample.horizontalpicker;
 
 import android.content.Context;
 import android.os.Handler;
@@ -75,7 +75,7 @@ public class HorizontalPickerRecyclerView extends RecyclerView implements OnItem
                         lastPosition = position;
                     }
                     break;
-                case SCROLL_STATE_DRAGGING:
+                case RecyclerView.SCROLL_STATE_DRAGGING:
                     listener.onDraggingPicker();
                     break;
             }

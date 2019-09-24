@@ -1,4 +1,4 @@
-package com.github.jhonnyx2012.horizontalpicker;
+package com.jhonnyx.horizontalpickerexample.horizontalpicker;
 
 
 /**

@@ -6,5 +6,5 @@ package com.github.jhonnyx2012.horizontalpicker;
 public interface HorizontalPickerListener {
     void onStopDraggingPicker();
     void onDraggingPicker();
-    void onDateSelected(Day item);
+    void onDateSelected(Item item);
 }

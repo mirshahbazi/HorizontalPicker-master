@@ -1,9 +1,11 @@
-package com.github.jhonnyx2012.horizontalpicker;
+package com.jhonnyx.horizontalpickerexample.horizontalpicker;
 
 import android.view.View;
 
 /**
- * Created by jhonn on 02/03/2017.
+ * Author: Hamed Taherpour
+ * *
+ * Created: 9/24/2019
  */
 public interface OnItemClickedListener {
     void onClickView(View v, int adapterPosition);

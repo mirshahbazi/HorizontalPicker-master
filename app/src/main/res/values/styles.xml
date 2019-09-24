@@ -1,11 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FontBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/IRANSansMobile(FaNum)_Bold.ttf</item>
+    </style>
+
+    <style name="FontLight" parent="android:TextAppearance">
+        <item name="fontPath">fonts/IRANSansMobile(FaNum)_Light.ttf</item>
     </style>
 
 </resources>

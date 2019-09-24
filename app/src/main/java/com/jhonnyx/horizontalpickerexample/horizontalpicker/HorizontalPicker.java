@@ -1,4 +1,4 @@
-package com.github.jhonnyx2012.horizontalpicker;
+package com.jhonnyx.horizontalpickerexample.horizontalpicker;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,6 +9,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntRange;
 import androidx.annotation.Nullable;
+
+import com.jhonnyx.horizontalpickerexample.R;
 
 import java.util.List;
 
@@ -23,7 +25,6 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
     private HorizontalPickerRecyclerView rvDays;
     private List<String> list;
 
-    private int drawableHover;
     private int mItemColor = -1;
     private int mItemColorTextColor = -1;
     private int mItemSelectedColor = -1;
@@ -55,9 +56,6 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
         vHover = findViewById(R.id.vHover);
         rvDays.setListener(this);
         rvDays.init(getContext(), count, hasSnapHelper, list, mItemColor, mItemSelectedColor, mItemSelectedTextColor, mItemColorTextColor, position);
-
-        if (drawableHover != -1)
-            vHover.setBackgroundResource(drawableHover);
     }
 
     public HorizontalPicker setData(List<String> list) {
@@ -87,11 +85,6 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
         if (listener != null) {
             listener.onDateSelected(item.getValue());
         }
-    }
-
-    public HorizontalPicker setItemHover(@DrawableRes int drawable) {
-        drawableHover = drawable;
-        return this;
     }
 
     public HorizontalPicker setItemSelectedTextColor(@ColorInt int color) {

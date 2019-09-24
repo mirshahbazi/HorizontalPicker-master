@@ -45,7 +45,7 @@ dependencies {
 
 Then to include it into your layout, add the following:
 ```xml
-<com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+<com.jhonnyx.horizontalpickerexample.horizontalpicker.HorizontalPicker
     android:id="@+id/datePicker"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>

@@ -1,12 +1,16 @@
-package com.github.jhonnyx2012.horizontalpicker;
+package com.jhonnyx.horizontalpickerexample.horizontalpicker;
 
 
+import android.graphics.Typeface;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.jhonnyx.horizontalpickerexample.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,9 +59,11 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
         if (item.isSelected()) {
             holder.tvText.setTextColor(mItemSelectedTextColor);
             holder.tvText.setBackgroundColor(mItemSelectedColor);
+            holder.tvText.setTypeface(holder.tvText.getTypeface(), Typeface.BOLD);
         } else {
             holder.tvText.setTextColor(mItemColorTextColor);
             holder.tvText.setBackgroundColor(mBackgroundColor);
+            holder.tvText.setTypeface(holder.tvText.getTypeface(), Typeface.NORMAL);
         }
     }
 
